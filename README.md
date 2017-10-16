@@ -1,24 +1,15 @@
-# README
+# Docker rails sample with CircleCI and Heroku
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dockernized rails sample app with test using CircleCI and deploy using Heroku
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+# Run as development
+```docker-compose up```
 
 * Database creation
+```docker-compose run web rails db:create```
 
 * Database initialization
+```docker-compose run web rails db:migrate```
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```docker-compose run web rails test```
