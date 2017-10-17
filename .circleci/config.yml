@@ -1,12 +1,12 @@
 version: 2
 jobs:
-   build:
-     machine: true
-     steps:
-       - checkout
-       - run:
-         name: Install Docker Compose
-         command: |
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+        name: Install Docker Compose
+        command: |
           set -x
           curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
           chmod +x /usr/local/bin/docker-compose
@@ -16,3 +16,6 @@ jobs:
       - run:
         name: test
         command: docker-compose run web rails test
+      - run:
+        name: docker-compose down
+        command: docker-compose down
