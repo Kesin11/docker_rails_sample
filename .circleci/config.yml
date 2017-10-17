@@ -5,17 +5,17 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Docker Compose
-        command: |
-          set -x
-          curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-          chmod +x /usr/local/bin/docker-compose
+          name: Install Docker Compose
+          command: |
+            set - x
+            curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+            chmod +x /usr/local/bin/docker-compose
       - run:
-        name: docker-compose up
-        command: docker-compose up -d
+          name: docker-compose up
+          command: docker-compose up -d
       - run:
-        name: test
-        command: docker-compose run web rails test
+          name: test
+          command: docker-compose run web rails test
       - run:
-        name: docker-compose down
-        command: docker-compose down
+          name: docker-compose down
+          command: docker-compose down
