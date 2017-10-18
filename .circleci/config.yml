@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: docker-compose up
-          command: docker-compose up
+          name: docker-compose build
+          command: docker-compose build
       - run:
           name: "before_test: setup db"
           command: docker-compose run web rails db:create db:migrate
