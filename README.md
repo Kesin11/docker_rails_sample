@@ -26,3 +26,29 @@ docker-compose run web rails db:migrate
 ```
 docker-compose run web rails test
 ```
+
+## Deploy to Heroku
+see https://devcenter.heroku.com/articles/container-registry-and-runtime
+
+```
+# install plugin
+heroku plugins:install heroku-container-registry
+
+# login to container registryc
+heroku container:login
+
+# create new heroku app
+heroku create
+
+# deploy to heroku
+heroku container:push web
+
+# attach postgresql addon
+heroku addons:create heroku-postgresql:hobby-dev
+
+# db setup
+heroku run rails db:migrate
+
+# access to heroku and check /users
+heroku open
+```
