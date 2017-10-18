@@ -3,14 +3,26 @@
 
 Dockernized rails sample app with test using CircleCI and deploy using Heroku
 
-# Run as development
-```docker-compose up```
+## Run as development
 
-* Database creation
-```docker-compose run web rails db:create```
+```
+docker-compose up
+```
 
-* Database initialization
-```docker-compose run web rails db:migrate```
+## Database creation
 
-* How to run the test suite
-```docker-compose run web rails test```
+```
+docker-compose run web rails db:create
+```
+
+## Database initialization
+
+```
+docker-compose run web rails db:migrate
+```
+
+## How to run the test suite
+
+```
+docker-compose run web rails test
+```
