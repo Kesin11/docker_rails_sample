@@ -9,7 +9,7 @@ jobs:
           name: docker-compose up
           command: docker-compose up -d
       - run:
-          name: before_test: setup db
+          name: "before_test: setup db"
           command: docker-compose run web rails db:create db:migrate
       - run:
           name: test
