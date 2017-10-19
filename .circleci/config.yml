@@ -6,6 +6,18 @@ jobs:
     steps:
       - checkout
       - run:
+          name: setup_heroku
+          command: bash .circleci/setup_heroku.sh
+      - run:
+          name: maintenance_on
+          command: heroku maintenance:on --app docker-rails-sample
+      - run:
+          name: db_migrate
+          command: heroku run rails db:migrate
+      - run:
+          name: maintenance_off
+          command: heroku maintenance:off --app docker-rails-sample
+      - run:
           name: docker-compose build
           command: docker-compose build
       - run:

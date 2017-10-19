@@ -56,3 +56,7 @@ heroku open
 ## Deploy to Heroku by CircleCI
 First, set HEROKU_AUTH_TOKEN=`heroku auth:token` to your circleci config from circleci console.
 When `git push origin master`, CircleCI deploy docker container to heroku container registroy.
+
+HEROKU_AUTH_TOKEN=`heroku auth:token`
+HEROKU_LOGIN="your.mail@address.com"
+HEROKU_API_KEY=`heroku auth:token`
