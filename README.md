@@ -52,3 +52,7 @@ heroku run rails db:migrate
 # access to heroku and check /users
 heroku open
 ```
+
+## Deploy to Heroku by CircleCI
+First, set HEROKU_AUTH_TOKEN=`heroku auth:token` to your circleci config from circleci console.
+When `git push origin master`, CircleCI deploy docker container to heroku container registroy.
