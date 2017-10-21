@@ -1,0 +1,6 @@
+{
+  "name": "docker-rails-sample",
+  "description": "Rails + docker-compose + CircleCI + heroku",
+  "repository": "https://github.com/Kesin11/docker_rails_sample",
+  "keywords": ["docker", "docker-compose", "circleci", "heroku"],
+}
