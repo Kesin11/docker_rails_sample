@@ -1,37 +1,38 @@
 # Docker rails sample with CircleCI and Heroku
 [![CircleCI](https://circleci.com/gh/Kesin11/docker_rails_sample/tree/master.svg?style=svg)](https://circleci.com/gh/Kesin11/docker_rails_sample/tree/master)
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kesin11/docker_rails_sample)
 
 Dockernized rails sample app with test using CircleCI and deploy using Heroku
 
 ## Run as development
 
-```
+```bash
 docker-compose up
 ```
 
 ## Database creation
 
-```
+```bash
 docker-compose run web rails db:create
 ```
 
 ## Database initialization
 
-```
+```bash
 docker-compose run web rails db:migrate
 ```
 
 ## How to run the test suite
 
-```
+```bash
 docker-compose run web rails test
 ```
 
 ## Deploy to Heroku
 see https://devcenter.heroku.com/articles/container-registry-and-runtime
 
-```
+```bash
 # install plugin
 heroku plugins:install heroku-container-registry
 
@@ -57,9 +58,11 @@ heroku open
 ## Deploy to Heroku by CircleCI
 Set these environment variables to your CircleCI build settings.
 
+```bash
 HEROKU_AUTH_TOKEN=`heroku auth:token`
 HEROKU_LOGIN="your.mail@address.com"
 HEROKU_API_KEY=`heroku auth:token`
 HEROKU_APP_NAME="your-herokuapp-name"
+```
 
 When `git push origin master` CircleCI deploy docker container to heroku container registroy and run `rails db:migrate`
