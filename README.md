@@ -1,5 +1,6 @@
 # Docker rails sample with CircleCI and Heroku
 [![CircleCI](https://circleci.com/gh/Kesin11/docker_rails_sample/tree/master.svg?style=svg)](https://circleci.com/gh/Kesin11/docker_rails_sample/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kesin11/docker_rails_sample)
 
 Dockernized rails sample app with test using CircleCI and deploy using Heroku
 
